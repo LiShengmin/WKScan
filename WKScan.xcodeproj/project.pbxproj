@@ -13,8 +13,17 @@
 		D326B8A61F57E87700C2490E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D326B8A51F57E87700C2490E /* Assets.xcassets */; };
 		D326B8A91F57E87700C2490E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D326B8A71F57E87700C2490E /* LaunchScreen.storyboard */; };
 		D326B8AC1F57E87800C2490E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D326B8AB1F57E87800C2490E /* main.m */; };
-		D326B8B61F57E87800C2490E /* WKScanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D326B8B51F57E87800C2490E /* WKScanTests.m */; };
-		D326B8C11F57E87800C2490E /* WKScanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D326B8C01F57E87800C2490E /* WKScanUITests.m */; };
+		D35145951F58352D0082511A /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; };
+		D35145961F58353C0082511A /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; };
+		D35145971F58353C0082511A /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D35145981F5835510082511A /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; };
+		D35145991F5835560082511A /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; };
+		D351459A1F5835560082511A /* Platinum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3E1CD891F5833F10069817B /* DLNADeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */; };
+		D3E1CD8A1F5833F10069817B /* DLNAPlatinumManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */; };
+		D3E1CD8B1F5833F10069817B /* DLNAScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */; };
+		D3E1CD901F5833F20069817B /* DeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD801F5833AF0069817B /* DeviceEntity.m */; };
+		D3E1CD921F5833F20069817B /* ScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD821F5833AF0069817B /* ScanManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D326B9E71F57FB1E00C2490E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D351459A1F5835560082511A /* Platinum.framework in Embed Frameworks */,
+				D35145971F58353C0082511A /* Neptune.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D326B8991F57E87700C2490E /* WKScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D326B89C1F57E87700C2490E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,11 +70,20 @@
 		D326B8AA1F57E87700C2490E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D326B8AB1F57E87800C2490E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D326B8B11F57E87800C2490E /* WKScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D326B8B51F57E87800C2490E /* WKScanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKScanTests.m; sourceTree = "<group>"; };
-		D326B8B71F57E87800C2490E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D326B8BC1F57E87800C2490E /* WKScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D326B8C01F57E87800C2490E /* WKScanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKScanUITests.m; sourceTree = "<group>"; };
-		D326B8C21F57E87800C2490E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32F586A1F5806510019EC86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D35145941F58351C0082511A /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neptune.framework; sourceTree = "<group>"; };
+		D3E1CD761F5833AF0069817B /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
+		D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNADeviceEntity.m; sourceTree = "<group>"; };
+		D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DLNAPlatinumManager.mm; sourceTree = "<group>"; };
+		D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNAScanManager.m; sourceTree = "<group>"; };
+		D3E1CD7B1F5833AF0069817B /* DLNADeviceEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNADeviceEntity.h; sourceTree = "<group>"; };
+		D3E1CD7C1F5833AF0069817B /* DLNAPlatinumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNAPlatinumManager.h; sourceTree = "<group>"; };
+		D3E1CD7D1F5833AF0069817B /* DLNAScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNAScanManager.h; sourceTree = "<group>"; };
+		D3E1CD7F1F5833AF0069817B /* ScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanManager.h; sourceTree = "<group>"; };
+		D3E1CD801F5833AF0069817B /* DeviceEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceEntity.m; sourceTree = "<group>"; };
+		D3E1CD811F5833AF0069817B /* DeviceEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceEntity.h; sourceTree = "<group>"; };
+		D3E1CD821F5833AF0069817B /* ScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35145991F5835560082511A /* Platinum.framework in Frameworks */,
+				D35145981F5835510082511A /* Platinum.framework in Frameworks */,
+				D35145961F58353C0082511A /* Neptune.framework in Frameworks */,
+				D35145951F58352D0082511A /* Neptune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +118,10 @@
 		D326B8901F57E87700C2490E = {
 			isa = PBXGroup;
 			children = (
+				D3E1CD741F5833AF0069817B /* Pod */,
 				D326B89B1F57E87700C2490E /* WKScan */,
-				D326B8B41F57E87800C2490E /* WKScanTests */,
-				D326B8BF1F57E87800C2490E /* WKScanUITests */,
 				D326B89A1F57E87700C2490E /* Products */,
+				D32F58691F5806500019EC86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,22 +151,47 @@
 			path = WKScan;
 			sourceTree = "<group>";
 		};
-		D326B8B41F57E87800C2490E /* WKScanTests */ = {
+		D32F58691F5806500019EC86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D326B8B51F57E87800C2490E /* WKScanTests.m */,
-				D326B8B71F57E87800C2490E /* Info.plist */,
+				D32F586A1F5806510019EC86 /* Foundation.framework */,
 			);
-			path = WKScanTests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D326B8BF1F57E87800C2490E /* WKScanUITests */ = {
+		D3E1CD741F5833AF0069817B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D326B8C01F57E87800C2490E /* WKScanUITests.m */,
-				D326B8C21F57E87800C2490E /* Info.plist */,
+				D3E1CD761F5833AF0069817B /* Platinum.framework */,
+				D35145941F58351C0082511A /* Neptune.framework */,
+				D3E1CD771F5833AF0069817B /* DLNAScan */,
+				D3E1CD7E1F5833AF0069817B /* Help */,
 			);
-			path = WKScanUITests;
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		D3E1CD771F5833AF0069817B /* DLNAScan */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1CD7B1F5833AF0069817B /* DLNADeviceEntity.h */,
+				D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */,
+				D3E1CD7C1F5833AF0069817B /* DLNAPlatinumManager.h */,
+				D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */,
+				D3E1CD7D1F5833AF0069817B /* DLNAScanManager.h */,
+				D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */,
+			);
+			path = DLNAScan;
+			sourceTree = "<group>";
+		};
+		D3E1CD7E1F5833AF0069817B /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1CD811F5833AF0069817B /* DeviceEntity.h */,
+				D3E1CD801F5833AF0069817B /* DeviceEntity.m */,
+				D3E1CD7F1F5833AF0069817B /* ScanManager.h */,
+				D3E1CD821F5833AF0069817B /* ScanManager.m */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +204,7 @@
 				D326B8951F57E87700C2490E /* Sources */,
 				D326B8961F57E87700C2490E /* Frameworks */,
 				D326B8971F57E87700C2490E /* Resources */,
+				D326B9E71F57FB1E00C2490E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E1CD891F5833F10069817B /* DLNADeviceEntity.m in Sources */,
+				D3E1CD8A1F5833F10069817B /* DLNAPlatinumManager.mm in Sources */,
+				D3E1CD8B1F5833F10069817B /* DLNAScanManager.m in Sources */,
+				D3E1CD901F5833F20069817B /* DeviceEntity.m in Sources */,
+				D3E1CD921F5833F20069817B /* ScanManager.m in Sources */,
 				D326B8A11F57E87700C2490E /* ViewController.m in Sources */,
 				D326B8AC1F57E87800C2490E /* main.m in Sources */,
 				D326B89E1F57E87700C2490E /* AppDelegate.m in Sources */,
@@ -272,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D326B8B61F57E87800C2490E /* WKScanTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +347,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D326B8C11F57E87800C2490E /* WKScanUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,11 +490,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9M9NSAEMPL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WKScan",
+					"$(PROJECT_DIR)/Pod",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = WKScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wukongTV.WKScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -437,11 +512,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9M9NSAEMPL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WKScan",
+					"$(PROJECT_DIR)/Pod",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = WKScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wukongTV.WKScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -518,6 +602,7 @@
 				D326B8C71F57E87800C2490E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D326B8C81F57E87800C2490E /* Build configuration list for PBXNativeTarget "WKScanTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +611,7 @@
 				D326B8CA1F57E87800C2490E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D326B8CB1F57E87800C2490E /* Build configuration list for PBXNativeTarget "WKScanUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +620,7 @@
 				D326B8CD1F57E87800C2490E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
