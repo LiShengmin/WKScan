@@ -7,11 +7,11 @@
 //
 
 #import "DLNAScanManager.h"
-#import <ConnectSDK.h>
-#import <DiscoveryManager.h>
-#import <DLNAService.h>
-#import <SSDPDiscoveryProvider.h>
-#import <DLNAHTTPServer.h>
+#import "ConnectSDK.h"
+#import "DiscoveryManager.h"
+#import "DLNAService.h"
+#import "SSDPDiscoveryProvider.h"
+#import "DLNAHTTPServer.h"
 
 @interface DLNAScanManager () <DiscoveryManagerDelegate>
 

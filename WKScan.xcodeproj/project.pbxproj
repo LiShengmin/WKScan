@@ -14,12 +14,6 @@
 		D326B8A61F57E87700C2490E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D326B8A51F57E87700C2490E /* Assets.xcassets */; };
 		D326B8A91F57E87700C2490E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D326B8A71F57E87700C2490E /* LaunchScreen.storyboard */; };
 		D326B8AC1F57E87800C2490E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D326B8AB1F57E87800C2490E /* main.m */; };
-		D35145951F58352D0082511A /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; };
-		D35145961F58353C0082511A /* Neptune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; };
-		D35145971F58353C0082511A /* Neptune.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D35145941F58351C0082511A /* Neptune.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D35145981F5835510082511A /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; };
-		D35145991F5835560082511A /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; };
-		D351459A1F5835560082511A /* Platinum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3E1CD891F5833F10069817B /* DLNADeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */; };
 		D3E1CD8B1F5833F10069817B /* DLNAScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */; };
 		D3E1CD901F5833F20069817B /* DeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD801F5833AF0069817B /* DeviceEntity.m */; };
@@ -50,8 +44,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D351459A1F5835560082511A /* Platinum.framework in Embed Frameworks */,
-				D35145971F58353C0082511A /* Neptune.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,8 +66,6 @@
 		D326B8B11F57E87800C2490E /* WKScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D326B8BC1F57E87800C2490E /* WKScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32F586A1F5806510019EC86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D35145941F58351C0082511A /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neptune.framework; sourceTree = "<group>"; };
-		D3E1CD761F5833AF0069817B /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
 		D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNADeviceEntity.m; sourceTree = "<group>"; };
 		D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNAScanManager.m; sourceTree = "<group>"; };
 		D3E1CD7B1F5833AF0069817B /* DLNADeviceEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNADeviceEntity.h; sourceTree = "<group>"; };
@@ -92,10 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D35145991F5835560082511A /* Platinum.framework in Frameworks */,
-				D35145981F5835510082511A /* Platinum.framework in Frameworks */,
-				D35145961F58353C0082511A /* Neptune.framework in Frameworks */,
-				D35145951F58352D0082511A /* Neptune.framework in Frameworks */,
 				4F75E17A1AAD082DAC86F2AD /* libPods-WKScan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,8 +152,6 @@
 		D3E1CD741F5833AF0069817B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				D3E1CD761F5833AF0069817B /* Platinum.framework */,
-				D35145941F58351C0082511A /* Neptune.framework */,
 				D3E1CD771F5833AF0069817B /* DLNAScan */,
 				D3E1CD7E1F5833AF0069817B /* Help */,
 			);
