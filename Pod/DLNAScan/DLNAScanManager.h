@@ -15,6 +15,8 @@
 
 - (void)DLNAScanManager:(DLNAScanManager *)manager findDevice:(DLNADeviceEntity *)device;
 - (void)DLNAScanManager:(DLNAScanManager *)manager removeDevice:(DLNADeviceEntity *)device;
+- (void)DLNAScanManager:(DLNAScanManager *)manager updateDevice:(DLNADeviceEntity *)device;
+- (void)DLNAScanManager:(DLNAScanManager *)manager error:(NSError *)error;
 
 @end
 

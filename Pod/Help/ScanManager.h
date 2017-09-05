@@ -10,18 +10,20 @@
 #import "DeviceEntity.h"
 
 
-typedef void(^Device) (DeviceEntity * device);
+@class ScanManager;
+@protocol ScanDeviceDelegate <NSObject>
+
+- (void)scanManager:(ScanManager *)manager upDateWithAllDevice:(NSArray <DeviceEntity *>*)devices;
+
+@end
 
 @interface ScanManager : NSObject
 
 + (ScanManager *)manager;
 
+@property (nonatomic, weak) id<ScanDeviceDelegate> delegate;
+
 - (void)statrScan;
 - (void)stopScan;
-
-- (void)getScanDeviceWithDLNA:(Device)dlnaDevice;
-- (void)getScanDeviceWithADB:(Device)adbDevice;
-- (void)getScanDeciceWithProtocol:(Device)dlnaDevice;
-- (void)getScanDeviceWithSDK:(Device)dlnaDevice;
 
 @end

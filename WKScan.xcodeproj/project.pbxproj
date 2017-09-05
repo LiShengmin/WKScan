@@ -21,7 +21,6 @@
 		D35145991F5835560082511A /* Platinum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; };
 		D351459A1F5835560082511A /* Platinum.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3E1CD761F5833AF0069817B /* Platinum.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3E1CD891F5833F10069817B /* DLNADeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */; };
-		D3E1CD8A1F5833F10069817B /* DLNAPlatinumManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */; };
 		D3E1CD8B1F5833F10069817B /* DLNAScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */; };
 		D3E1CD901F5833F20069817B /* DeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD801F5833AF0069817B /* DeviceEntity.m */; };
 		D3E1CD921F5833F20069817B /* ScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E1CD821F5833AF0069817B /* ScanManager.m */; };
@@ -78,10 +77,8 @@
 		D35145941F58351C0082511A /* Neptune.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Neptune.framework; sourceTree = "<group>"; };
 		D3E1CD761F5833AF0069817B /* Platinum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Platinum.framework; sourceTree = "<group>"; };
 		D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNADeviceEntity.m; sourceTree = "<group>"; };
-		D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DLNAPlatinumManager.mm; sourceTree = "<group>"; };
 		D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNAScanManager.m; sourceTree = "<group>"; };
 		D3E1CD7B1F5833AF0069817B /* DLNADeviceEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNADeviceEntity.h; sourceTree = "<group>"; };
-		D3E1CD7C1F5833AF0069817B /* DLNAPlatinumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNAPlatinumManager.h; sourceTree = "<group>"; };
 		D3E1CD7D1F5833AF0069817B /* DLNAScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNAScanManager.h; sourceTree = "<group>"; };
 		D3E1CD7F1F5833AF0069817B /* ScanManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanManager.h; sourceTree = "<group>"; };
 		D3E1CD801F5833AF0069817B /* DeviceEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceEntity.m; sourceTree = "<group>"; };
@@ -182,8 +179,6 @@
 			children = (
 				D3E1CD7B1F5833AF0069817B /* DLNADeviceEntity.h */,
 				D3E1CD781F5833AF0069817B /* DLNADeviceEntity.m */,
-				D3E1CD7C1F5833AF0069817B /* DLNAPlatinumManager.h */,
-				D3E1CD791F5833AF0069817B /* DLNAPlatinumManager.mm */,
 				D3E1CD7D1F5833AF0069817B /* DLNAScanManager.h */,
 				D3E1CD7A1F5833AF0069817B /* DLNAScanManager.m */,
 			);
@@ -393,7 +388,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3E1CD891F5833F10069817B /* DLNADeviceEntity.m in Sources */,
-				D3E1CD8A1F5833F10069817B /* DLNAPlatinumManager.mm in Sources */,
 				D3E1CD8B1F5833F10069817B /* DLNAScanManager.m in Sources */,
 				D3E1CD901F5833F20069817B /* DeviceEntity.m in Sources */,
 				D3E1CD921F5833F20069817B /* ScanManager.m in Sources */,

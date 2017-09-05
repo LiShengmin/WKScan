@@ -7,48 +7,76 @@
 //
 
 #import "DLNAScanManager.h"
-#import "DLNAPlatinumManager.h"
+#import <ConnectSDK.h>
+#import <DiscoveryManager.h>
+#import <DLNAService.h>
+#import <SSDPDiscoveryProvider.h>
+#import <DLNAHTTPServer.h>
 
-@interface DLNAScanManager () <DLNAPlatinumDelegate>
+@interface DLNAScanManager () <DiscoveryManagerDelegate>
 
-@property (nonatomic, strong) DLNAPlatinumManager * manager;
+@property (nonatomic, strong) DiscoveryManager * manager;
 
 @end
 
 @implementation DLNAScanManager
 
 - (void)startMediaControl {
-    [self.manager startMediaControl];
+    [self.manager startDiscovery];
 }
 
 - (void)stopMediaControll {
-    [self.manager stopMediaControll];
+    [self.manager stopDiscovery];
+    self.manager = nil;
 }
 
-- (DLNAPlatinumManager *)manager {
+
+#pragma mark- DiscoveryManagerDelegate
+- (void)discoveryManager:(DiscoveryManager *)manager didFindDevice:(ConnectableDevice *)device {
+    if (_delegate && [_delegate respondsToSelector:@selector(DLNAScanManager:findDevice:)]) {
+        [_delegate DLNAScanManager:self findDevice:[self getDLNADeviceWithConnecttableDevice:device]];
+    }
+}
+
+- (void)discoveryManager:(DiscoveryManager *)manager didLoseDevice:(ConnectableDevice *)device {
+    if (_delegate && [_delegate respondsToSelector:@selector(DLNAScanManager:removeDevice:)]) {
+        [_delegate DLNAScanManager:self removeDevice:[self getDLNADeviceWithConnecttableDevice:device]];
+    }
+}
+
+- (void)discoveryManager:(DiscoveryManager *)manager didUpdateDevice:(ConnectableDevice *)device {
+    if (_delegate && [_delegate respondsToSelector:@selector(DLNAScanManager:updateDevice:)]) {
+        [_delegate DLNAScanManager:self updateDevice:[self getDLNADeviceWithConnecttableDevice:device]];
+
+    }
+}
+- (void)discoveryManager:(DiscoveryManager *)manager didFailWithError:(NSError*)error {
+    if (_delegate && [_delegate respondsToSelector:@selector(DLNAScanManager:error:)]) {
+        [_delegate DLNAScanManager:self error:error];
+    }
+}
+
+#pragma mark- Prative
+- (DLNADeviceEntity *)getDLNADeviceWithConnecttableDevice:(ConnectableDevice *)device {
+    DLNADeviceEntity * dlnaDevice = [[DLNADeviceEntity alloc] initWithid:device.id
+                                                                    UUID:device.serviceDescription.UUID
+                                                                      ip:device.address
+                                                                    addr:[device.serviceDescription.commandURL absoluteString]
+                                                                    name:device.friendlyName
+                                                                facturer:device.serviceDescription.manufacturer
+                                                               modelName:device.modelName];
+    return dlnaDevice;
+}
+
+#pragma mark- 懒加载
+- (DiscoveryManager *)manager {
     if (!_manager) {
-        _manager = [[DLNAPlatinumManager alloc] init];
+        _manager = [DiscoveryManager sharedManager];
         _manager.delegate = self;
+        [_manager registerDeviceService:[DLNAService class] withDiscovery:[SSDPDiscoveryProvider class]];
+        [_manager registerDeviceService:[DLNAHTTPServer class] withDiscovery:[SSDPDiscoveryProvider class]];
     }
     return _manager;
-}
-
-//- (DLNAPlatinumManager *)managerWithDelegate:(id<DLNAScanDelegate>)delegate{
-//    if (!_manager) {
-//        _manager = [[DLNAPlatinumManager alloc] init];
-//        _manager.delegate = self;
-//        _delegate = delegate;
-//    }
-//    return _manager;
-//}
-
-#pragma mark- DLNAPlatinumDelegate
-- (void)DLNAPlatinumManageer:(DLNAPlatinumManager *)manager findDevice:(DLNADeviceEntity *)device {
-    [_delegate DLNAScanManager:self findDevice:device];
-}
-
-- (void)DLNAPlatinumManageer:(DLNAPlatinumManager *)manager removeDevice:(DLNADeviceEntity *)device {
-    [_delegate DLNAScanManager:self removeDevice:device];
 }
 
 @end

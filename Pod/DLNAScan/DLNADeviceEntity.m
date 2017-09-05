@@ -10,23 +10,33 @@
 
 @implementation DLNADeviceEntity
 
--(instancetype)initWithName:(NSString *)name
-                       UUID:(NSString *)uuid
-               manufacturer:(NSString *)manufacturer
-                  modelName:(NSString *)modelName
-                modelNumber:(NSString *)modelNumber
-               serialNumber:(NSString *)serialNumber
-             descriptionURL:(NSString *)descriptionURL
-{
+- (instancetype)initWithid:(NSString *)ID
+                      UUID:(NSString *)uuid
+                        ip:(NSString *)ip
+                      addr:(NSString *)addr
+                      name:(NSString *)name
+                  facturer:(NSString *)facturer
+                 modelName:(NSString *)modelName {
     if (self = [super init]) {
-        self.name = name;
+        self.ID = ID;
         self.uuid = uuid;
-        self.facturer = manufacturer;
-        self.model = modelName;
-        self.serialNumber = serialNumber;
-        self.addr = descriptionURL;
+        self.ip = ip;
+        self.addr = addr;
+        self.name = name;
+        self.facturer = facturer;
+        self.modelName = modelName;
     }
     return self;
+}
+
+- (NSString *)getPort {
+    if (!self.addr) return @"";
+    NSString * tempStr = self.addr;
+    if ([[tempStr substringFromIndex:self.addr.length] isEqualToString:@"/"]) {
+        tempStr = [self.addr substringWithRange:NSMakeRange(0, self.addr.length-1)];
+    }
+    NSString * portStr = [self.addr componentsSeparatedByString:@":"].lastObject;
+    return portStr;
 }
 
 @end

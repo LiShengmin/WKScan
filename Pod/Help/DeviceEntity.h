@@ -22,7 +22,7 @@ typedef NS_OPTIONS(NSUInteger, DeviceEntityScanType) {
 @interface DeviceEntity : NSObject
 
 @property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * ip;
+@property (nonatomic, strong) NSString * ip; //identifier
 @property (nonatomic, strong) NSArray * ports;
 @property (nonatomic, assign) DeviceEntityScanType type;
 
