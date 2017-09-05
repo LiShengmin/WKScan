@@ -1,0 +1,14 @@
+PODS:
+  - ConnectSDK/Core (1.6.0):
+    - ConnectSDK/no-arc
+  - ConnectSDK/no-arc (1.6.0)
+
+DEPENDENCIES:
+  - ConnectSDK/Core
+
+SPEC CHECKSUMS:
+  ConnectSDK: f6159b056ec53943df82c4d541a9bfae21592be4
+
+PODFILE CHECKSUM: ed43621ba90e8565e9e50dac700ea0aa0032b89a
+
+COCOAPODS: 1.2.1
