@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "DeviceEntity.h"
 
-
 @class ScanManager;
 @protocol ScanDeviceDelegate <NSObject>
 
